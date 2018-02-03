@@ -4,16 +4,19 @@
   "description": "A Vue.js project",
   "author": "DavidWallJ <djkindread@gmail.com>",
   "private": true,
+  "main": "index.js",
   "scripts": {
-    "dev":
-      "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "node server.js",
-    "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "start": "nodemon ./index.js --ignore node_modules/ -e js,html,css"
   },
   "dependencies": {
+    "axios": "^0.15.2",
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "querystring": "^0.2.0",
+    "scrollmonitor": "^1.2.0",
     "express": "^4.16.2",
-    "vue": "^2.5.2"
+    "vue": "^2.5.2",
+    "vue-resource": "^1.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -42,6 +45,7 @@
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
+    "nodemon": "^1.11.0",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
@@ -49,6 +53,7 @@
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
+    "reload": "^1.1.0",
     "rimraf": "^2.6.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
@@ -66,5 +71,9 @@
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
-  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
