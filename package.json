@@ -6,7 +6,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js --ignore node_modules/ -e js,html,css"
+    "start": "nodemon ./index.js --ignore node_modules/ -e js,html,css",
+    "build": "node build/build.js"
   },
   "dependencies": {
     "axios": "^0.15.2",
